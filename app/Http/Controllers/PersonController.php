@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Person;
+use App\Room;
 use Illuminate\Http\Request;
 
 class PersonController extends Controller
@@ -25,7 +26,8 @@ class PersonController extends Controller
      */
     public function create()
     {
-        return view('people.create');
+
+        return view('people.create')->with('rooms',Room::all());
     }
 
     /**
@@ -42,7 +44,12 @@ class PersonController extends Controller
         $intitute= $request->institute;
         $cnic= $request->cnic;
 
-        Person::create(['name'=>$name, 'phone'=>$phone, 'date_of_birth'=>$date, 'institute'=>$intitute, 'cnic'=>$cnic]);
+        dd($request->all());
+
+        Person::create([ 'room_id'=>$request->room_id , 'name'=>$name, 'phone'=>$phone, 'date_of_birth'=>$date, 'institute'=>$intitute, 'cnic'=>$cnic]);
+
+//
+
     }
 
     /**
@@ -53,6 +60,7 @@ class PersonController extends Controller
      */
     public function show(Person $person)
     {
+
 
     }
 

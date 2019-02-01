@@ -9,13 +9,23 @@
 </head>
 <body>
 
-<form action={{route('people.store')}} method="post">
+<form action='{{route('people.store')}}' method="post">
     @csrf
     name <input type="text" name="name" value="yaseen"><br>
     phone <input type="text" name="phone" value="03008889267"><br>
     date_of_birth <input type="text" name="date_of_birth" value="10-04-2018"><br>
     institute <input type="text" name="institute" value="superior"><br>
     cnicNo <input type="text" name="cnic" value="3620231893552"><br>
+
+
+    <select name="room_id" id="">
+    @foreach($rooms as $room)
+
+        <option value="{{ $room->id  }}">{{$room->name}}</option>
+
+      @endforeach
+    </select>
+
     <input type="submit" value="submit">
 </form>
 
