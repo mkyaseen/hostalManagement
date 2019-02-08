@@ -13,8 +13,23 @@
 
 Route::resource('people', 'PersonController');
 
-Route::resource('rooms', 'RoomController');
+
+
+//Route::resource('rooms', 'RoomController');
 
 //Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/page1' ,function (){
+
+    return view('page1');
+});
+Route::get('/page2' ,function (){
+
+    return view('page2');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

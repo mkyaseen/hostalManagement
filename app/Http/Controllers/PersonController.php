@@ -16,6 +16,8 @@ class PersonController extends Controller
     public function index()
     {
         $per = Person::all();
+
+        //return $per;
         return view('people.index')->with('people', $per);
     }
 
@@ -48,7 +50,6 @@ class PersonController extends Controller
 
         Person::create([ 'room_id'=>$request->room_id , 'name'=>$name, 'phone'=>$phone, 'date_of_birth'=>$date, 'institute'=>$intitute, 'cnic'=>$cnic]);
 
-//
 
     }
 

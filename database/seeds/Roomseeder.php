@@ -12,7 +12,7 @@ class Roomseeder extends Seeder
     public function run()
     {
         Room::create([
-            'name'=>'ali',
+            'name'=>'room1',
             'status'=>'2',
             'capacity'=>3,
             'has_account'=>'se343'
@@ -21,7 +21,7 @@ class Roomseeder extends Seeder
         ]);
 
         Room::create([
-            'name'=>'imran',
+            'name'=>'room2',
             'status'=>'22',
             'capacity'=>32,
             'has_account'=>'se3i43'
@@ -29,7 +29,7 @@ class Roomseeder extends Seeder
 
         ]);
         Room::create([
-            'name'=>'imran',
+            'name'=>'room3',
             'status'=>'22',
             'capacity'=>32,
             'has_account'=>'se3i43'
@@ -37,7 +37,7 @@ class Roomseeder extends Seeder
 
         ]);
         Room::create([
-            'name'=>'imran',
+            'name'=>'room4',
             'status'=>'22',
             'capacity'=>32,
             'has_account'=>'se3i43'
@@ -45,7 +45,7 @@ class Roomseeder extends Seeder
 
         ]);
         Room::create([
-            'name'=>'imran',
+            'name'=>'room5',
             'status'=>'22',
             'capacity'=>32,
             'has_account'=>'se3i43'
@@ -53,7 +53,7 @@ class Roomseeder extends Seeder
 
         ]);
         Room::create([
-            'name'=>'imran',
+            'name'=>'room6',
             'status'=>'22',
             'capacity'=>32,
             'has_account'=>'se3i43'

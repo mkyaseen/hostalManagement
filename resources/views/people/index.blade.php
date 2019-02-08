@@ -22,7 +22,7 @@
     </thead>
     <tbody>
     total number of person {{count($people)}}
-    @foreach($people as $Person)
+    @foreach($people as $people)
     <tr>
         <td>{{$people->id}}</td>
         <td>{{$people->name}}</td>
@@ -31,6 +31,7 @@
         <td>{{$people->institute}}</td>
         <td>{{$people->cnic}}</td>
         <td>{{$people->room_id}}</td>
+
     </tr>
 
         @endforeach
