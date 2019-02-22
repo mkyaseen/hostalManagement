@@ -40,17 +40,20 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
-       $name = $request->name;
+
+        $name = $request->name;
         $phone = $request->phone;
         $date= $request->date_of_birth;
         $intitute= $request->institute;
         $cnic= $request->cnic;
 
-        dd($request->all());
-
         Person::create([ 'room_id'=>$request->room_id , 'name'=>$name, 'phone'=>$phone, 'date_of_birth'=>$date, 'institute'=>$intitute, 'cnic'=>$cnic]);
 
 
+        // $dept = Person::create($request->all());
+       // session()->put('key', '<b>sd</b>');
+
+      return redirect(route('people.index'))->with('status', 'successfully created')->withInput($request->all());
     }
 
     /**
@@ -85,7 +88,8 @@ class PersonController extends Controller
      */
     public function update(Request $request, Person $person)
     {
-        //
+        $person->update($request->all());
+        return redirect(route('departments.index'))->with('status', 'updated successfully')->withInput($request->all());
     }
 
     /**
@@ -96,6 +100,7 @@ class PersonController extends Controller
      */
     public function destroy(Person $person)
     {
-        //
+        Person::destroy($person->id);
+        return redirect()->route('people.index')->with('status', 'successfully deleted');
     }
 }

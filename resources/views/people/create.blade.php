@@ -1,33 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>web page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-</head>
-<body>
+@extends('layouts.master')
 
-<form action='{{route('people.store')}}' method="post">
-    @csrf
-    name <input type="text" name="name" value="yaseen"><br>
-    phone <input type="text" name="phone" value="03008889267"><br>
-    date_of_birth <input type="text" name="date_of_birth" value="10-04-2018"><br>
-    institute <input type="text" name="institute" value="superior"><br>
-    cnicNo <input type="text" name="cnic" value="3620231893552"><br>
+@section('main-content')
+    <div class="container" style="background-color: mintcream">
+
+        <form action='{{route('people.store')}}' method="post">
+            @csrf
+            <div class="form-group row">
+                <label for="name" class="col"></label>
+                <input type="text" id="name" class="form-control" name="name" placeholder="user name">
+            </div>
+            <div class="form-group row">
+                <label for="phone" class="col"></label>
+                <input type="text" id="phone" class="form-control" name="phone" placeholder="mobile number">
+            </div>
+            <div class="form-group row">
+                <label for="Date_of_birth" class="col"></label>
+                <input type="text" id="date_of_birth" class="form-control" name="date_of_birth" placeholder="dd/month/year">
+            </div>
+            <div class="form-group row">
+                <label for="institute" class="col"></label>
+                <input type="text" id="institute" class="form-control" name="institute" placeholder="institute">
+            </div>
+
+            <div class="form-group row">
+                <label for="institute" class="col"></label>
+                <input type="text" id="institute" class="form-control" name="cnic" placeholder="36202-3189355-2">
+            </div>
+
+            <select name="room_id" id="">
+                @foreach($rooms as $room)
+
+                    <option value="{{ $room->id  }}">{{$room->name}}</option>
+
+                @endforeach
+            </select>
+
+            <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                    <button type="submit" class="btn-bd-primary btn-primary">save</button>
+                </div>
+            </div>
 
 
-    <select name="room_id" id="">
-    @foreach($rooms as $room)
+        </form>
 
-        <option value="{{ $room->id  }}">{{$room->name}}</option>
+    </div>
 
-      @endforeach
-    </select>
-
-    <input type="submit" value="submit">
-</form>
-
-</body>
-</html>
+@endsection
