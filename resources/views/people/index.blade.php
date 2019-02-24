@@ -6,7 +6,7 @@
         <div class="row">
             @if (session('status'))
                 <div class="alert alert-success">
-                    {{ session('status') }} :{{ old('name') }}
+                    {{ session('status') }} :{{ old('phone') }}
                 </div>
             @endif @if (session('key'))
                 <div class="alert alert-success">
