@@ -6,7 +6,7 @@
         <div class="row">
             @if (session('status'))
                 <div class="alert alert-success">
-                    {{ session('status') }} :{{ old('phone') }}
+                    {{ session('status') }} :{{ old('name') }}
                 </div>
             @endif @if (session('key'))
                 <div class="alert alert-success">
@@ -20,17 +20,13 @@
 
         <div class="row mb-2">
             <div class="col">
-                <span class="h2">people Details</span>
-            </div>
-
-            <div class="d-flex justify-content-start">
-                <i class="fas fa-igloo"></i> <a class="btn btn-success" href={{route( 'people.create')}}>Add person</a>
             </div>
 
         </div>
+        <div class="row">
 
-
-        <table table border="1px" style="margin-top: 20px">
+            <div class="col">
+                <table class="table">
             <thead>
             <tr>
                 <th>id</th>
@@ -65,5 +61,7 @@
 
             </tbody>
         </table>
+            </div>
+        </div>
 
 @endsection

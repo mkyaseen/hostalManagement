@@ -2,7 +2,7 @@
 
 @extends('layouts.app')
 
-@section('content')
+@section('main-content')
 
     this is first test
 

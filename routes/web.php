@@ -30,6 +30,11 @@ Route::get('/page2' ,function (){
 
     return view('page2');
 });
+Route::get('/shahid' ,function (){
+
+    return view('shahid');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
