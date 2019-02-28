@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\rooms;
 
 use Illuminate\Database\Eloquent\Model;
 

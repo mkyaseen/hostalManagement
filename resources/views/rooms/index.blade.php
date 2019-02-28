@@ -12,6 +12,8 @@
         <th>status</th>
         <th>capacity</th>
         <th>Has_ac</th>
+        <th>update</th>
+        <th>Delete</th>
     </tr>
 
     </thead>

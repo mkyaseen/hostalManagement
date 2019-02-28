@@ -28,7 +28,6 @@
                 <li class="nav-item active">
                     <a class="nav-link" href={{route( 'people.create')}}>Add person<span class="sr-only"></span></a>
                 </li>
-                <li><a href="">add rooms</a></li>
             </ul>
             <form class="form-inline mt-2 mt-md-0">
                 <h2>HostalManagement</h2>

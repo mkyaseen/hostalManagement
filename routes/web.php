@@ -17,10 +17,10 @@ Route::resource('rooms', 'RoomController');
 
 
 
-Route::get('/rooms/create', function (){
+/*Route::get('/rooms/create', function (){
 
     return view('rooms.create');
-});
+});*/
 
 Auth::routes();
 
