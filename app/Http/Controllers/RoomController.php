@@ -36,7 +36,14 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $name = $request->name;
+        $status = $request->status;
+        $capacity = $request->capacity;
+        $has_ac = $request->has_ac;
+
+        Person::create(['name'=>$name, 'status'=>$status, 'capacity'=>$capacity, 'has_ac'=>$has_ac]);
+
+        return redirect(route('rooms.index'))->with('status', 'successfully created')->withInput($request->all());
     }
 
     /**

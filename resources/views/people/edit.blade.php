@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('main-content')
 <div class="container" style="background-color: whitesmoke;">
 
     <form action={{route( 'people.update',['id'=>$room->id])}} method="POST">
@@ -52,3 +52,5 @@
         </div>
     </form>
 </div>
+
+    @endsection

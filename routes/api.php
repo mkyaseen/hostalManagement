@@ -18,3 +18,5 @@ use Illuminate\Http\Request;
 //});
 
 Route::apiResource('people', 'Api\PersonController')->except(['people.create', 'people.edit']);
+
+Route::apiResource('rooms', 'Api\RoomController')->except(['rooms.create', 'rooms.edit']);

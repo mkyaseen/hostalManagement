@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>web page</title>
-</head>
-<body>
+@extends('layouts.master')
+@section('main-content')
 
-<table>
+    <div class="row">
+
+        <div class="col">
+<table class="table">
     <thead>
     <tr>
         <th>id</th>
@@ -30,7 +28,7 @@
         @endforeach
     </tbody>
 </table>
+        </div>
+    </div>
+@endsection
 
-
-</body>
-</html>
