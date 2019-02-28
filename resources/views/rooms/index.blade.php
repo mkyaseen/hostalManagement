@@ -11,7 +11,7 @@
         <th>name</th>
         <th>status</th>
         <th>capacity</th>
-        <th>Ha_ac</th>
+        <th>Has_ac</th>
     </tr>
 
     </thead>
@@ -22,7 +22,7 @@
         <td>{{$room->name}}</td>
         <td>{{$room->status}}</td>
         <td>{{$room->capacity}}</td>
-        <td>{{$room->has_account}}</td>
+        <td>{{$room->has_ac}}</td>
     </tr>
 
         @endforeach

@@ -15,12 +15,16 @@ Route::resource('people', 'PersonController');
 
 Route::resource('rooms', 'RoomController');
 
-//Route::resource('rooms', 'RoomController');
+
+
+Route::get('/rooms/create', function (){
+
+    return view('rooms.create');
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 
 Route::get('/page1' ,function (){
 

@@ -18,7 +18,7 @@ class CreateRoomsTable extends Migration
             $table->string('name', 250);
             $table->string('status',250);
             $table->integer('capacity');
-            $table->string('has_account', 250);
+            $table->string('has_ac', 250);
             $table->timestamps();
         });
     }

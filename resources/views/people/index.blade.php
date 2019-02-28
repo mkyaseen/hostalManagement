@@ -36,6 +36,8 @@
                 <th>Institute</th>
                 <th>CNIC</th>
                 <th>Room_Id</th>
+                <th>Edit</th>
+                <th>Delete</th>
 
 
             </tr>

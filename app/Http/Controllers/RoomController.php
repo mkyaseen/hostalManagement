@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Person;
 use App\Room;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+        return view('rooms.create');
     }
 
     /**
@@ -36,14 +37,11 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->name;
-        $status = $request->status;
-        $capacity = $request->capacity;
-        $has_ac = $request->has_ac;
+        $rooms = Room::create($request->all());
 
-        Person::create(['name'=>$name, 'status'=>$status, 'capacity'=>$capacity, 'has_ac'=>$has_ac]);
-
-        return redirect(route('rooms.index'))->with('status', 'successfully created')->withInput($request->all());
+       // Person::create(['name'=>$name, 'status'=>$status, 'capacity'=>$capacity, 'has_ac'=>$has_ac]);
+         return redirect(route('rooms.index'));
+       // return redirect(route('rooms.index'))->with('statuse', 'successfully created')->withInput($request->all());
     }
 
     /**

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('main-content')
-    <div class="container" style="background-color: mintcream">
+    <div class="container" style="background-color: mintcream; margin-top: 20px; width: 500px">
 
         <form action='{{route('people.store')}}' method="post">
             @csrf
@@ -37,7 +37,7 @@
 
             <div class="form-group row">
                 <div class="offset-sm-2 col-sm-10">
-                    <button type="submit" class="btn-bd-primary btn-group">save</button>
+                    <button type="submit" class="btn-group" style="width: 80px; background-color: #00cc00; padding-left: 15px">save</button>
                 </div>
             </div>
 

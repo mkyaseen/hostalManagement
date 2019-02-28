@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="{{asset("favicon.ico")}}">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>HostalManagement </title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('dist/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -19,7 +19,7 @@
 
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
-        <a class="navbar-brand" href="#">home</a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,22 +28,16 @@
                 <li class="nav-item active">
                     <a class="nav-link" href={{route( 'people.create')}}>Add person<span class="sr-only"></span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Details</a>
-                </li>
+                <li><a href="">add rooms</a></li>
             </ul>
             <form class="form-inline mt-2 mt-md-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <h2>HostalManagement</h2>
             </form>
         </div>
     </nav>
 </header>
 
-<main role="main">
+<main role="main" class="container">
 
    @yield('main-content')
 
