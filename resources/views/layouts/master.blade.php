@@ -14,26 +14,38 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset("css/carousel.css")}}" rel="stylesheet">
+    <style>
+     a:hover{
+        background-color: #90b1e5;
+}
+    }
+    </style>
 </head>
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                    <a class="nav-link" href={{route( 'people.index')}}>Home<span class="sr-only"></span></a>
+                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href={{route( 'people.create')}}>Add person<span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href={{route( 'rooms.create')}}>Add room<span class="sr-only"></span></a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href={{route( 'rooms.index')}}>RoomHoom<span class="sr-only"></span></a>
+                </li>
             </ul>
             <form class="form-inline mt-2 mt-md-0">
-                <h2>HostalManagement</h2>
+                <h2  style="color:#f2f6f9">HostalManagement</h2>
             </form>
         </div>
     </nav>
@@ -44,7 +56,7 @@
    @yield('main-content')
 
     <!-- FOOTER -->
-    <footer class="footer" style="background-color: #00ccff; height: 50px; text-align: center; padding-top: 10px">
+    <footer class="footer" style="background-color:#171819; height: 50px; text-align: center; padding-top: 10px">
         <p class="float-right" style="padding-right: 20px"><a href="#">Back to top</a></p>
         <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
     </footer>
