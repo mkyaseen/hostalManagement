@@ -1,6 +1,28 @@
 @extends('layouts.master')
 @section('main-content')
 
+<div class="container">
+        <div class="row">
+            @if (session('status'))
+                <div class="alert alert-success">
+                    {{ session('status') }} :{{ old('name') }}
+                </div>
+            @endif @if (session('key'))
+                <div class="alert alert-success">
+                    {!! session('key') !!}
+                </div>
+
+            @endif
+
+        </div>
+
+
+        <div class="row mb-2">
+            <div class="col">
+            </div>
+
+        </div>
+
     <div class="row">
 
         <div class="col">

@@ -40,8 +40,8 @@ class RoomController extends Controller
         $rooms = Room::create($request->all());
 
        // Person::create(['name'=>$name, 'status'=>$status, 'capacity'=>$capacity, 'has_ac'=>$has_ac]);
-         return redirect(route('rooms.index'));
-       // return redirect(route('rooms.index'))->with('statuse', 'successfully created')->withInput($request->all());
+        // return redirect(route('rooms.index'));
+       return redirect(route('rooms.index'))->with('statuse', 'successfully created')->withInput($request->all());
     }
 
     /**
