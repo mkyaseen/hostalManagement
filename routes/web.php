@@ -26,9 +26,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/page1' ,function (){
+Route::get('/layouts/master' ,function (){
 
-    return view('page1');
+    return view('layouts.master');
 });
 Route::get('/page2' ,function (){
 
